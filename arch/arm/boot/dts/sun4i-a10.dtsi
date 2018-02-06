@@ -184,6 +184,7 @@
 		compatible = "allwinner,sun4i-a10-display-engine";
 		allwinner,pipelines = <&fe0>, <&fe1>;
 		status = "disabled";
+		memory-region = <&cma>;
 	};
 
 	reserved-memory {
@@ -1033,6 +1034,7 @@
 			clocks = <&ccu CLK_AHB_GPU>, <&ccu CLK_GPU>;
 			clock-names = "bus", "core";
 			resets = <&ccu RST_GPU>;
+			memory-region = <&cma>;
 
 			assigned-clocks = <&ccu CLK_GPU>;
 			assigned-clock-rates = <320000000>;
